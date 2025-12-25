@@ -26,7 +26,7 @@ The project utilizes the C-MAPSS (Commercial Modular Aero-Propulsion System Simu
   2. The Model: Long Short-Term Memory (LSTM)
     A Recurrent Neural Network (RNN) variant was chosen to capture the temporal dependencies of engine degradation.
       - Layer 1: LSTM (50 units, return_sequences=True) - Captures low-level temporal features
-      - Layer 2 : LSTM (100 units) - Abstracts high-level degradation patterns.
+      - Layer 2 : LSTM (512 units) - Abstracts high-level degradation patterns.
       - Dropout: (0.2) - Applied to prevent overfitting.
       - Dense Layer: Output layer with 1 unit (Predicted RUL).
       - Optimizer: Adam.
