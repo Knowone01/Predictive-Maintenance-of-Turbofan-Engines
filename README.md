@@ -14,12 +14,12 @@ The project utilizes the C-MAPSS (Commercial Modular Aero-Propulsion System Simu
  
 # Architecture & Methodology
 1. Data Preprocessing
-  Raw sensor data is noisy and varies in scale. The following engineering steps were applied:
-  - Feature Selection: Sensors with constant values (zero variance) across the lifespan were dropped to reduce noise.
-  - Normalization: Applied MinMax Scaling to bring all sensor readings between [0, 1] for stable gradient descent.
-  - RUL Label Generation: Calculated the inverse linear degradation (RUL = Max Life - Current Cycle). Clipped the RUL at a threshold (125 cycles) because early-stage degradation     is negligible.
-  - Sliding Window Segmentation: Converted 2D data into 3D sequences (Samples, Time Steps, Features) to feed into the LSTM.
-    - Window Size: 30 Cycles.
+    Raw sensor data is noisy and varies in scale. The following engineering steps were applied:
+    - Feature Selection: Sensors with constant values (zero variance) across the lifespan were dropped to reduce noise.
+    - Normalization: Applied MinMax Scaling to bring all sensor readings between [0, 1] for stable gradient descent.
+    - RUL Label Generation: Calculated the inverse linear degradation (RUL = Max Life - Current Cycle). Clipped the RUL at a threshold (125 cycles) because early-stage degradation     is negligible.
+    - Sliding Window Segmentation: Converted 2D data into 3D sequences (Samples, Time Steps, Features) to feed into the LSTM.
+      - Window Size: 30 Cycles.
 
   2. The Model: Long Short-Term Memory (LSTM)
     A Recurrent Neural Network (RNN) variant was chosen to capture the temporal dependencies of engine degradation.
