@@ -30,7 +30,7 @@ The project utilizes the C-MAPSS (Commercial Modular Aero-Propulsion System Simu
       - Dropout: (0.2) - Applied to prevent overfitting.
       - Dense Layer: Output layer with 1 unit (Predicted RUL).
       - Optimizer: Adam.
-      - Loss Function: Custom asymmetric loss function to penalise late predicitions more, montiored along with MSE and scoring functon suggested by NASA.
+      - Loss Function: Custom asymmetric loss function to penalise late predictions more, monitored along with MSE and scoring functon suggested by NASA.
     
 ## Results and Performance : 
   The model was evaluated on the Test set (engines cut off before failure)
