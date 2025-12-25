@@ -35,4 +35,8 @@ The project utilizes the C-MAPSS (Commercial Modular Aero-Propulsion System Simu
    - MSE score : 1336.71
    - NASA's loss function score : 38.64
 
+![Error distribution plot](Error_Distribution.png)
+![Test predictions plot](Test_Predictions.png)
+
+
     
