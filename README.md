@@ -1,9 +1,9 @@
-# Project Overview
+## Project Overview
 This project implements a Deep Learning workflow to predict the Remaining Useful Life (RUL) of aircraft turbofan engines. By analyzing time-series sensor data, the model predicts how many operational cycles an engine has left before failure.
 
 This approach moves beyond traditional "Threshold-Based Maintenance" (fixing only when broken) to Predictive Maintenance, allowing for optimized scheduling and reduced downtime in aerospace systems.
 
-# The Dataset: NASA CMAPSS 
+## The Dataset: NASA CMAPSS 
 The project utilizes the C-MAPSS (Commercial Modular Aero-Propulsion System Simulation) dataset provided by NASA.
 - Source: NASA Prognostics Data Repository
 - Structure: Multivariate Time-Series Data.
@@ -12,7 +12,7 @@ The project utilizes the C-MAPSS (Commercial Modular Aero-Propulsion System Simu
   - 3 Operational Settings: Altitude, Mach Number, Throttle Resolver Angle.
   - 21 Sensors: Total Temperature, Pressure, Fan Speeds, etc. (across High/Low-Pressure Compressors and Turbines).
  
-# Architecture & Methodology
+## Architecture & Methodology
 1. Data Preprocessing
     Raw sensor data is noisy and varies in scale. The following engineering steps were applied:
     - Feature Selection: Sensors with constant values (zero variance) across the lifespan were dropped to reduce noise.
@@ -30,7 +30,7 @@ The project utilizes the C-MAPSS (Commercial Modular Aero-Propulsion System Simu
       - Optimizer: Adam.
       - Loss Function: Custom asymmertric loss function to penalise late predicitions more, montiored along with MSE and loss functons suggested by NASA.
     
-# Results and Performance : 
+## Results and Performance : 
   The model was evaluated on the Test set (engines cut off before failure)
    - MSE score : 1336.71
    - NASA's loss function score : 38.64
